@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" version="3.0" unique-identifier="pub-identifier" prefix="widget: http://idpf.org/epub/vocab/widget/#">
+  <metadata>
+    <dc:identifier id="pub-identifier">sandersk_ibooks_ereader_detector</dc:identifier>
+    <meta id="meta-identifier" property="dcterms:identifier">sandersk_ibooks_ereader_detector</meta>
+    <dc:title id="pub-title">iBooks Ereader Detector</dc:title>
+    <meta property="dcterms:title" id="meta-title">iBooks Ereader Detector</meta>
+    <dc:language id="pub-language">en</dc:language>
+    <dc:creator>Sanders Kleinfeld</dc:creator>
+    <meta property="dcterms:language" id="meta-language">en</meta>
+    <meta property="dcterms:modified">2014-12-25T00:10:34Z</meta>
+  </metadata>
+  <manifest>
+    <item id="toc_ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="toc" href="toc01.html" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="epub_css" href="epub.css" media-type="text/css"/>
+    <item id="ch01" href="ch01.html" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine toc="toc_ncx">
+    <itemref idref="ch01"/>
+  </spine>
+</package>

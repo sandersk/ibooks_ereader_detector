@@ -1,0 +1,74 @@
+/* Media query order matters here, as later true media queries override earlier ones) */
+
+/* Default responses */
+
+#platform_device::after {
+    content: "an ereader other than iBooks";
+}
+
+#orientation::after {
+    content: "either portrait or landscape mode";
+}
+
+/* Default orientation handling */
+
+@media (orientation:landscape) {
+    #orientation::after {
+        content: "landscape mode";
+    }
+}
+
+@media (orientation:portrait) {
+    #orientation::after {
+        content: "portrait mode";
+    }
+}
+
+/* iBooks Platform Queries */
+
+/* iBooks Desktop "device" pixel dimensions (tested on MacBook Retina) */
+@media (min-device-width:1440px) and (max-device-width:2147483646px) {
+    #platform_device::after {
+        content: "iBooks Desktop for Mac"; 
+    }
+    /* Cannot find way to determine orientation or two-up view b/c 
+       RS window can be resized at will and each page is separate viewport,
+       so no definitive max/min widths to rely on, and aspect-ratio queries
+       do not appear to be reliable */
+    #orientation::after { 
+        content: "either portrait or landscape mode";
+    }
+}
+
+/* Standard iPad device pixel dimensions */
+@media (min-device-width:768px) and (max-device-width:1024px) {
+    #platform_device::after {
+        content: "iBooks for iPad";
+    }
+}
+
+/* Standard iPad device pixel dimensions + portrait viewport
+(in portrait view for iPad, viewport width is > 567 px) */
+@media (min-device-width:768px) and (max-device-width:1024px) and 
+(max-width: 567px) {
+    #orientation::after {
+        content: "portrait mode";
+    }
+}
+
+/* Standard iPad device pixel dimensions + two-up landscaped viewport 
+(in landscape view for iPad, each page is a separate viewport which is
+less than 480 px) */
+@media (min-device-width:768px) and (max-device-width:1024px) and 
+(max-width: 480px) {
+    #orientation::after {
+        content: "landscape mode (two-up view)";
+    }
+}
+
+/* Should work on iPhone 5s and below */
+@media (max-device-width:480px) {
+    #platform_device::after {
+        content: "iBooks for iPhone";
+    }
+}

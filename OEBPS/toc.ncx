@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+  <head>
+    <meta name="cover" content="cover"/>
+    <meta name="dtb:uid" content="randomid-idp0"/>
+  </head>
+  <docTitle>
+    <text>The Ereader Diagnostician</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="invisible_eink_entry" playOrder="1">
+      <navLabel>
+        <text>The Ereader Diagnostician</text>
+      </navLabel>
+      <content src="ch01.html"/>
+    </navPoint>
+  </navMap>
+</ncx>
