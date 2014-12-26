@@ -1,4 +1,4 @@
-/* Media query order matters here, as later true media queries override earlier ones) */
+/* Media query order matters here, as content of later media queries will override that of earlier ones) */
 
 /* Default responses */
 
