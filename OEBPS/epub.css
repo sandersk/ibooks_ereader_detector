@@ -47,15 +47,6 @@
     }
 }
 
-/* Standard iPad device pixel dimensions + portrait viewport
-(in portrait view for iPad, viewport width is > 567 px) */
-@media (min-device-width:768px) and (max-device-width:1024px) and 
-(max-width: 567px) {
-    #orientation::after {
-        content: "portrait mode";
-    }
-}
-
 /* Standard iPad device pixel dimensions + two-up landscaped viewport 
 (in landscape view for iPad, each page is a separate viewport which is
 less than 480 px) */
